@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NBSAPLanding</title>
+  <title>NBSAP Forum</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<header>
-  <img src="/assets/NBSAP-Logo.png" />
-  <aside>Support for actions on NBSAPs</aside>
-</header>
-<%= yield %>
+  <div id="center-content">
+    <header>
+      <%= image_tag  "NBSAP-Logo.png", alt: 'NBSAP Forum' %>
+      <aside>Support for actions on NBSAPs</aside>
+    </header>
+    <%= yield %>
 
-<footer>
-  <div class="left">
-    <h4>NBSAP Forum is a joint initiative by</h4>
-    <%= image_tag "cbd-logo.png" %>
-    <%= image_tag "unep-logo.png" %>
+    <footer>
+      <div class="left">
+        <h4>NBSAP Forum is a joint initiative by</h4>
+        <%= image_tag "cbd-logo.png" %>
+        <%= image_tag "unep-logo.png" %>
+      </div>
+      <div class="right">
+        <a href="#">About NBSAPs</a>
+        <a href="#">NBSAP Finance</a>
+      </div>
+    </footer>
   </div>
-  <div class="right">
-    <a href="#">About NBSAPs</a>
-    <a href="#">NBSAP Finance</a>
-  </div>
-</footer>
 </body>
 </html>
