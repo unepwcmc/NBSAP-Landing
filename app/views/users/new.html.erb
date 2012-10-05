@@ -1,0 +1,4 @@
+<% unless @user.errors.empty? %>
+  <p class="error">Sorry, we were unable to save your details, please double-check your email address.</p>
+<% end %>
+<%= render :partial => 'users/form' %>

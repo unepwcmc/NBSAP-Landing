@@ -1,0 +1,18 @@
+<%= form_for User.new do |f| %>
+  <h3 class="green">Sign up to keep in touch. We’ll let you know when the full site has launched.</h3>
+  <%= f.text_field :email %>
+  <h4>What would you like to do on this site?</h4>
+  <ul>
+    <li><%= f.check_box :learn_about_aichi_targets %><%= f.label :learn_about_aichi_targets, "Learn more about the different Aichi Target themes" %></li>
+    <li><%= f.check_box :participate_in_learning_group %><%= f.label :participate_in_learning_group, "Participate in a sub-regional learning group" %></li>
+    <li><%= f.check_box :workshops_and_study_tours %><%= f.label :workshops_and_study_tours, "Find out about workshops and study tours" %></li>
+  </ul>
+  <ul>
+    <li><%= f.check_box :identify_peers %><%= f.label :identify_peers, "Identify peers, experts and/or suitable consultants" %></li>
+    <li><%= f.check_box :tech_support %><%= f.label :tech_support, "Access technical support from a Helpdesk" %></li>
+  </ul>
+  <div>
+    <%= f.text_area :notes %>
+    <input type="submit" value="SEND"/>
+  </div>
+<% end %>

@@ -1,5 +1,7 @@
 NBSAPLanding::Application.routes.draw do
   root :to => 'static#landing'
+
+  resources :users, :only => :create
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

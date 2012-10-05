@@ -15,6 +15,7 @@
     <h3 class="green">Sign up to keep in touch. We’ll let you know when the full site has launched.</h3>
     <input type="text"/>
   </form>
+  <div id="new-form-container"></div>
 </article>
 <article id="main-content">
   <ul id="places">
@@ -52,21 +53,4 @@
     </li>
   </ul>
 </article>
-<form id="signup-form">
-  <h3 class="green">Sign up to keep in touch. We’ll let you know when the full site has launched.</h3>
-  <input type="text"/>
-  <h4>What would you like to do on this site?</h4>
-  <ul>
-    <li><input type="checkbox"/><label>Learn more about the different Aichi Target themes</label></li>
-    <li><input type="checkbox"/><label>Learn more about the different Aichi Target themes</label></li>
-    <li><input type="checkbox"/><label>Learn more about the different Aichi Target themes</label></li>
-  </ul>
-  <ul>
-    <li><input type="checkbox"/><label>Learn more about the different Aichi Target themes</label></li>
-    <li><input type="checkbox"/><label>Learn more about the different Aichi Target themes</label></li>
-  </ul>
-  <div>
-    <input type="textarea"/>
-    <input type="submit" value="SEND"/>
-  </div>
-</form>
+<%= render :partial => 'users/form' %>

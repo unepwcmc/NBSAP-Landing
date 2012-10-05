@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  notes: MyText
+  learn_about_aichi_targets: false
+  participate_in_learning_group: false
+  workshops_and_study_tours: false
+  identify_peers: false
+  tech_support: false
+
+two:
+  email: MyString
+  notes: MyText
+  learn_about_aichi_targets: false
+  participate_in_learning_group: false
+  workshops_and_study_tours: false
+  identify_peers: false
+  tech_support: false
