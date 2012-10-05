@@ -14,7 +14,7 @@ $.fn.serializeObject = ->
   o
 
 $(() ->
-  $("form").submit((e)->
+  $("#main-content").delegate('form', 'submit',(e)->
     e.preventDefault
     userData = $(this).serializeObject()
     that = this
@@ -31,6 +31,12 @@ $(() ->
   )
 
   $("#signup-trigger").focus(() ->
+    # Copy the existing form on the page to where the user clicked
+    $("#new-form-container").html($("form#new_user").clone())
+    # Remove the original form
+    $("#main-content > form#new_user").remove()
+
+    # Show the new form
     $("#dummy-form").hide()
     $("#new-form-container").show()
     $("#new-form-container #user_email").focus()
