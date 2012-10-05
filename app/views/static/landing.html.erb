@@ -11,11 +11,13 @@
       diverse actors to come together, online and in person, to share knowledge, experiences and resources. The Forum is a partnership between the CBD secretariat, UNEP, UNDP, governments, NGOs and others, all working to reverse the loss of biodiversity by 2020.
     </div>
   </section>
-  <form>
+  <form id="dummy-form">
     <h3 class="green">Sign up to keep in touch. We’ll let you know when the full site has launched.</h3>
-    <input type="text"/>
+    <input id="signup-trigger" type="text"/>
   </form>
-  <div id="new-form-container"></div>
+  <div id="new-form-container">
+    <%= render :partial => 'users/form' %>
+  </div>
 </article>
 <article id="main-content">
   <ul id="places">

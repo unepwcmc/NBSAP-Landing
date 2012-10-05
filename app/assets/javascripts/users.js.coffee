@@ -29,4 +29,10 @@ $(() ->
     )
     return false
   )
+
+  $("#signup-trigger").focus(() ->
+    $("#dummy-form").hide()
+    $("#new-form-container").show()
+    $("#new-form-container #user_email").focus()
+  )
 )
