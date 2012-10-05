@@ -5,9 +5,10 @@
 body {
   background: #F2F2F2 image-url('logo-background.png') no-repeat 0 0;
   font-family: Tahoma, Geneva, sans-serif;
+  margin: 0;
 }
 
-#center-content {
+.center-content {
   width: 955px;
   margin: auto;
 }
@@ -209,5 +210,38 @@ ul#places {
   > div {
     float:left;
     width: 317px;
+  }
+}
+
+footer {
+  background: #F2F2F2 image-url('footer-background.png') repeat 0 0;
+  color: #DAE6ED;
+  overflow: hidden;
+  margin-top: 50px;
+  
+  a {
+    color: #DAE6ED;
+  }
+
+  div.center-content {
+    margin: 5px auto 0;
+  }
+
+  div.left {
+    float:left;
+
+    img {
+      vertical-align: text-top;
+    }
+  }
+
+  div.right {
+    float: right;
+    vertical-align: top;
+  }
+
+  h4 {
+    font-weight: normal;
+    margin: 0 0 10px;
   }
 }

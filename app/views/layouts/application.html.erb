@@ -8,24 +8,28 @@
 </head>
 <body>
 
-  <div id="center-content">
+  <div class="center-content">
     <header>
       <%= image_tag  "NBSAP-Logo.png", alt: 'NBSAP Forum' %>
       <aside>Support for actions on NBSAPs</aside>
     </header>
     <%= yield %>
 
-    <footer>
+  </div>
+
+  <footer>
+    <div class="center-content">
       <div class="left">
         <h4>NBSAP Forum is a joint initiative by</h4>
         <%= image_tag "cbd-logo.png" %>
         <%= image_tag "unep-logo.png" %>
+        <%= image_tag "undp-logo.png" %>
       </div>
       <div class="right">
         <a href="#">About NBSAPs</a>
         <a href="#">NBSAP Finance</a>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </body>
 </html>
