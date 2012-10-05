@@ -12,6 +12,14 @@ body {
   margin: auto;
 }
 
+h3.green {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #CBD300;
+  margin: 0 0 5px 0;
+}
+
 header {
   font-family: Arial, Arial, Helvetica, sans-serif;
   color: #D8E5EB;
@@ -61,11 +69,6 @@ header {
     background-color: #F1F6FB;
     padding: 5px 10px;
     border-radius: 5px;
-    color: #CBD300;
-
-    p {
-      margin: 0 0 5px 0;
-    }
 
     input {
       color: #CCC;
@@ -124,5 +127,87 @@ ul#places {
 
   > li:first-child {
     margin-left: 0;
+  }
+}
+
+#signup-form {
+  border: 1px solid #9CB8C8;
+  background-color: #EDF1F5;
+  padding: 30px 37px 37px;
+  color: #666;
+  overflow:hidden;
+
+  h3 {
+    font-size: 19px;
+  }
+
+  h4 {
+    margin: 40px 0 10px 0;
+  }
+
+  input[type="text"],
+  input[type="textarea"] {
+    color: #CCC;
+    padding: 5px;
+    width: 600px;
+    font-size: 23px;
+    border: 5px solid #F4F4F4;
+    border-radius: 5px;
+  }
+
+  input[type="textarea"] {
+    width: 300px;
+    height: 150px;
+    margin-bottom: 20px
+  }
+
+  input[type="submit"] {
+    background: rgb(203,211,0);
+    background: -moz-linear-gradient(top, rgba(203,211,0,1) 0%, rgba(188,198,21,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(203,211,0,1)), color-stop(100%,rgba(188,198,21,1)));
+    background: -webkit-linear-gradient(top, rgba(203,211,0,1) 0%,rgba(188,198,21,1) 100%);
+    background: -o-linear-gradient(top, rgba(203,211,0,1) 0%,rgba(188,198,21,1) 100%);
+    background: -ms-linear-gradient(top, rgba(203,211,0,1) 0%,rgba(188,198,21,1) 100%);
+    background: linear-gradient(to bottom, rgba(203,211,0,1) 0%,rgba(188,198,21,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbd300', endColorstr='#bcc615',GradientType=0 );
+
+    width: 180px;
+    border-radius: 30px;
+    border: 0;
+    padding: 12px;
+    color: #FFF;
+    font-size: 23px;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+
+    float:right;
+  }
+
+  ul {
+    padding: 0 30px 0 0;
+    float:left;
+    width: 250px;
+    margin: 5px 0 0 0;
+
+    li {
+      list-style-type: none;
+      overflow:hidden;
+      padding: 5px 0;
+
+      input, label {
+        float:left;
+      }
+      input {
+        margin-top: 5px;
+      }
+      label {
+        width: 225px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  > div {
+    float:left;
+    width: 317px;
   }
 }
