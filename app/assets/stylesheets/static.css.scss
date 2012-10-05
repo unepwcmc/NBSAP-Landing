@@ -76,3 +76,53 @@ header {
     }
   }
 }
+
+ul#places {
+  overflow: hidden;
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+  }
+
+  > li {
+    background-image: image-url('place-background.png');
+    float:left;
+    margin-left: 25px;
+    width: 298px;
+    height: 429px;
+
+    div.dot {
+      margin: 61px 75px;
+      text-align:center;
+
+      h3 {
+        color: #FFF;
+        font-size: 16px;
+        font-family: Tahoma, Geneva, sans-serif;
+        font-weight: normal;
+      }
+    }
+
+    .place-links {
+      padding: 13px 0 0 25px;
+
+      li {
+        color: #666;
+        padding: 19px 0;
+        border-top: 2px solid #E7EC99;
+        font-size: 15px;
+        width: 50px;
+        white-space: nowrap;
+        overflow:visible;
+      }
+      li:first-child {
+        border-top: 0;
+      }
+    }
+  }
+
+  > li:first-child {
+    margin-left: 0;
+  }
+}
