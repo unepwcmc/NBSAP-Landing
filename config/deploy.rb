@@ -170,7 +170,6 @@ task :setup_production_database_configuration do
 end
 after "deploy:setup", :setup_production_database_configuration
 after 'deploy:update_code', 'deploy:assets:precompile'
-after 'deploy:update_code', 'whenever:update_crontab'
 
 namespace :deploy do
   namespace :assets do
