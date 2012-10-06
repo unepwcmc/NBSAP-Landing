@@ -23,9 +23,16 @@ $(() ->
       url: $(this).attr("action")
       data: userData,
       success: (html) ->
-        $(that).html(html)
+        container = $(that)
+        # Bit of a hack
+        if html.match(/\<form/)
+          container = $(container).parent()
+        else
+          $(container).parent().find("p.error").remove()
+
+        $(container).html(html)
       error: (e, html) ->
-        $(that).html(html)
+        $(that).parent().html(html)
     )
     return false
   )
