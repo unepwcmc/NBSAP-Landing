@@ -71,7 +71,7 @@ header {
     padding: 5px 10px;
     border-radius: 5px;
 
-    input {
+    > input {
       color: #CCC;
       padding: 5px;
       width: 600px;
@@ -84,6 +84,7 @@ header {
 ul#places {
   overflow: hidden;
   padding-left: 0;
+  margin-bottom: 70px;
 
   li {
     list-style-type: none;
@@ -92,7 +93,7 @@ ul#places {
   > li {
     background-image: image-url('place-background.png');
     float:left;
-    margin-left: 25px;
+    margin-left: 30px;
     width: 298px;
     height: 429px;
 
@@ -144,6 +145,7 @@ ul#places {
 
   h4 {
     margin: 40px 0 10px 0;
+    clear: both;
   }
 
   input[type="text"],
@@ -269,4 +271,9 @@ p.error {
   display:none;
   width: 934px;
   position: absolute;
+
+  form {
+    width: 888px;
+    padding: 30px 32px 37px;
+  }
 }

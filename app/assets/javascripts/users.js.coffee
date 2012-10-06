@@ -41,4 +41,11 @@ $(() ->
     $("#new-form-container").show()
     $("#new-form-container #user_email").focus()
   )
+
+  # Hide the signup form on click outside it
+  $("body").click((e) ->
+    if $(e.target).closest('#new-form-container').length == 0 
+      $("#dummy-form").show()
+      $("#new-form-container").hide()
+  )
 )
