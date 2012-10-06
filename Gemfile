@@ -23,6 +23,14 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  # Deploy with Capistrano
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'brightbox', '>=2.3.9'
+  gem 'ruby-debug19', :require => 'ruby-debug'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -36,4 +44,3 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-gem 'ruby-debug19'
