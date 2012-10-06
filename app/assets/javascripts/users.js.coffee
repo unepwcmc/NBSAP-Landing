@@ -39,9 +39,10 @@ $(() ->
 
   $("#signup-trigger").focus(() ->
     # Copy the existing form on the page to where the user clicked
-    $("#new-form-container").html($("form#new_user").clone())
-    # Remove the original form
-    $("#main-content > form#new_user").remove()
+    if !$.trim( $('#new-form-container').html() ).length 
+      $("#new-form-container").html($("form#new_user").clone())
+      # Remove the original form
+      $("#main-content > form#new_user").remove()
 
     # Show the new form
     $("#dummy-form").hide()
