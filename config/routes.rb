@@ -1,4 +1,8 @@
 NBSAPLanding::Application.routes.draw do
+  mount RailsAdmin::Engine => '/administration', :as => 'rails_admin'
+
+  devise_for :administrators
+
   root :to => 'static#landing'
 
   resources :users, :only => :create

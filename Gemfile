@@ -6,8 +6,8 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
 gem 'json'
+gem 'rails_admin'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -44,3 +44,6 @@ end
 # gem 'capistrano'
 
 # To use debugger
+
+
+gem "devise"

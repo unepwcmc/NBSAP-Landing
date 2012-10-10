@@ -21,3 +21,4 @@
 
 # OS X
 *.DS_Store
+/nbproject
