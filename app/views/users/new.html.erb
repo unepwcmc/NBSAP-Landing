@@ -1,4 +1,9 @@
-<% unless @user.errors.empty? %>
-  <p class="error">Sorry, we were unable to save your details, please double-check your email address.</p>
+<%= render 'form' %>
+
+<% if @user.errors.any? %>
+  <div id="error-box">
+    <p>Sorry, we were unable to save your details, please double-check your email address.</p>
+
+    <a class="back-button" href="#">Go back</a>
+  </div>
 <% end %>
-<%= render :partial => 'users/form' %>

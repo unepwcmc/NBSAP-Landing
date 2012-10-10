@@ -1,5 +1,5 @@
 <article id="about">
-  <h1>WELCOME TO THE HOME OF THE NBSAP FORUM</h1>
+  <h1 class="uppercase">Welcome to the home of the NBSAP forum</h1>
   <section id="subhead">
     We are developing the NBSAP Forum website to offer countries support in transforming and implementing their NBSAPs. Sign up and let us know what you would like included.
   </section>
@@ -13,7 +13,7 @@
   </section>
   <form id="dummy-form">
     <h3 class="green">Sign up to keep in touch. We’ll let you know when the full site has launched.</h3>
-    <input id="signup-trigger" type="text"/>
+    <input id="signup-trigger" type="text" placeholder="Enter your email address" />
   </form>
   <div id="new-form-container">
   </div>
@@ -22,7 +22,7 @@
   <ul id="places">
     <li>
       <div class="dot">
-        <h3>A PLACE TO CONNECT</h3>
+        <h3 class="uppercase">A place to connect</h3>
       </div>
       <ul class="place-links">
         <li>Face-to-face workshops</li>
@@ -32,7 +32,7 @@
     </li>
     <li>
       <div class="dot">
-        <h3>A PLACE TO FIND RESOURCES</h3>
+        <h3 class="uppercase">A place to find resources</h3>
       </div>
       <ul class="place-links">
         <li>Guidelines and templates</li>
@@ -43,7 +43,7 @@
     </li>
     <li>
       <div class="dot">
-        <h3>A PLACE FOR SUPPORT</h3>
+        <h3 class="uppercase">A place for support</h3>
       </div>
       <ul class="place-links">
         <li>Peer and expert reviews</li>
@@ -54,5 +54,5 @@
   </ul>
 </article>
 <div id="static-form">
-  <%= render :partial => 'users/form' %>
+  <%= render 'users/form' %>
 </div>

@@ -3,41 +3,41 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $.fn.serializeObject = ->
-  o = {}
-  a = @serializeArray()
-  $.each a, ->
-    if o[@name] isnt `undefined`
-      o[@name] = [o[@name]]  unless o[@name].push
-      o[@name].push @value or ""
+  obj = {}
+  arr = @serializeArray()
+  $.each arr, ->
+    if obj[@name]?
+      obj[@name] = [obj[@name]] unless obj[@name].push
+      obj[@name].push @value or ""
     else
-      o[@name] = @value or ""
-  o
+      obj[@name] = @value or ""
+  return obj
 
-$(() ->
-  $("#main-content").delegate('form', 'submit',(e)->
-    e.preventDefault
+$ ->
+  $("#main-content").delegate 'form', 'submit', (e) ->
+    e.preventDefault()
     userData = $(this).serializeObject()
-    that = this
-    $.ajax(
-      type: 'POST',
+    $.ajax
+      type: 'POST'
       url: $(this).attr("action")
-      data: userData,
-      success: (html) ->
-        container = $(that)
+      data: userData
+      success: (html) =>
+        container = $(this)
         # Bit of a hack
         if html.match(/\<form/)
           container = $(container).parent()
         else
           $(container).parent().find("p.error").remove()
-
         $(container).html(html)
-      error: (e, html) ->
-        $(that).parent().html(html)
-    )
+      error: (e, html) =>
+        $(this).parent().html(html)
     return false
-  )
 
-  $("#signup-trigger").focus(() ->
+  $("#main-content").on 'click', '.back-button', (e) ->
+    $(this).parent().hide().prev().removeClass('hidden')
+    return false
+
+  $("#signup-trigger").focus ->
     # Copy the existing form on the page to where the user clicked
     if !$.trim( $('#new-form-container').html() ).length 
       $("#new-form-container").html($("form#new_user").clone())
@@ -48,12 +48,9 @@ $(() ->
     $("#dummy-form").hide()
     $("#new-form-container").show()
     $("#new-form-container #user_email").focus()
-  )
 
   # Hide the signup form on click outside it
-  $("body").click((e) ->
+  $("body").click (e) ->
     if $(e.target).closest('#new-form-container').length == 0 
       $("#dummy-form").show()
       $("#new-form-container").hide()
-  )
-)

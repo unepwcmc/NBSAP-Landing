@@ -1,6 +1,6 @@
-<%= form_for @user do |f| %>
+<%= form_for @user, :html => { class: (@user.errors.any? ? "hidden" : nil) } do |f| %>
   <h3 class="green">Sign up to keep in touch. We’ll let you know when the full site has launched.</h3>
-  <%= f.text_field :email %>
+  <%= f.text_field :email, placeholder: 'Enter your email address' %>
   <h4>What would you like to do on this site?</h4>
   <ul>
     <li><%= f.check_box :learn_about_aichi_targets %><%= f.label :learn_about_aichi_targets, "Learn more about the different Aichi Target themes" %></li>
@@ -12,7 +12,7 @@
     <li><%= f.check_box :tech_support %><%= f.label :tech_support, "Access technical support from a Helpdesk" %></li>
   </ul>
   <div>
-    <%= f.text_area :notes %>
+    <%= f.text_area :notes, placeholder: 'Anything else you would like to tell us about NBSAP Forum? Let us know here.' %>
     <input type="submit" value="SEND"/>
   </div>
 <% end %>
